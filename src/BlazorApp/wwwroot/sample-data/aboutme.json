@@ -1,12 +1,11 @@
 {
-  "description": "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.",
+  "description": "I'm a family nurse practitioner with a Master's degree from Vanderbilt University, bringing over a decade of diverse nursing experience. For the past 5 years, I've specialized in telemedicine, offering on-demand urgent care and consultations for a range of conditions across all age groups.",
   "skills": [
-    "Web design",
-    "User experience",
-    "Inclusive design",
-    "Focus group testing",
-    "Mobile user interfaces",
-    "Graphic design"
+    "Basic Life Support",
+    "Acute Care",
+    "Primary Care",
+    "Family Practice",
+    "Telemedicine"
   ],
-  "detailOrQuote": "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all."
+  "detailOrQuote": "With a profound passion for compassionate care, I am dedicated to providing efficient and empathetic healthcare services through telemedicine, ensuring patients receive the highest level of support and attention they deserve."
 }
