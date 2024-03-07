@@ -1,7 +1,7 @@
 [
   {
-    "title": "Amwell 🎉",
-    "description": "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
+    "title": "Amwell",
+    "description": "Provided on-demand videocall and phone urgent care to adult and pediatric patients.",
     "url": "https://amwell.com/landing.htm"
   },
   {
@@ -13,5 +13,10 @@
     "title": "Wheel",
     "description": "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
     "url": "https://www.wheel.com/"
+  },
+  {
+    "title": "AgelessRx",
+    "description": "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
+    "url": "https://agelessrx.com/"
   }
 ]
