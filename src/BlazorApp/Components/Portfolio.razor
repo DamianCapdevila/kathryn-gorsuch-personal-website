@@ -1,27 +1,32 @@
 <section class="light" id="portfolio">
     <h2>Customers</h2>
     <div class="portfolio-container">
-    @if (projects is null)
+    @if (customers is null)
     {
         <p><em>Loading...</em></p>
     }
     else
     {
-        <div class="portfolio-hero">
+        @* <div class="portfolio-hero">
             @if (hero is not null)
             {
                 <img src="@(hero.Src)" style="height: 90%; width: 100%; object-fit: cover;" 
                     alt="@(hero.Alt)" />
             }
-        </div>
+        </div> *@
         <div class="container">
-            @foreach (var project in projects)
+            @foreach (var customer in customers)
             {
-                <div class="box" key="@project.Title">
-                    <a href="@project.Url" target="_blank" rel="noopener noreferrer">
-                        <h3 style="flex-basis: 40px;">@project.Title</h3>
+                <div class="box" key="@customer.Title">
+                    <a href="@customer.Url" target="_blank" rel="noopener noreferrer">
+                        <h3 style="flex-basis: 40px;">@customer.Title</h3>
                     </a>
-                    <p class="small">@project.Description</p>
+                    @* <p class="small">@customer.Description</p> *@
+                    @if(wheelLogo is not null)
+                    {
+                        <img src="@(wheelLogo.Src)" style="height: 100%; width: 100%; object-fit: cover;" 
+                        alt="@(wheelLogo.Alt)" />
+                    }
                 </div>
             }
         </div>
@@ -36,12 +41,14 @@
     [Parameter, EditorRequired]
     public required HeroImageService HeroImageService { get; set; }
 
-    private List<Project>? projects;
+    private List<Customer>? customers;
     private HeroImage? hero;
+    private HeroImage? wheelLogo;
 
     protected override async Task OnInitializedAsync()
     {
-        projects = await Http.GetFromJsonAsync<List<Project>>("sample-data/projects.json");
+        customers = await Http.GetFromJsonAsync<List<Customer>>("sample-data/customers.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
+        wheelLogo = await HeroImageService.GetHeroAsync(img => img.Name is "wheel-logo");
     }
 }
