@@ -1,9 +1,14 @@
 [
   {
-    "name": "home",
-    "src": "images/kate.jfif",
+    "name": "kathryn",
+    "src": "images/kathryn.jfif",
     "alt": "telemedicine professional woman with formal attire"
   },
+  {
+    "name": "home-background",
+    "src": "images/medicine-background.jpg",
+    "alt": "background with common medicine elements and tools"
+  }, 
   {
     "name": "about",
     "src": "images/motion-background.jpg",

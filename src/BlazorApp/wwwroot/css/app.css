@@ -13,6 +13,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 div#main {
   display: flex;
   flex-direction: column;
@@ -42,6 +46,19 @@ section img.background {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
+  pointer-events: none;
+  object-fit: cover;
+}
+
+ section img.kathryn {
+  width: 30vmax; 
+  height: 30vmax; 
+  border-radius: 50%; 
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  right: 25%; 
+  transform: translate(50%, -50%);
   pointer-events: none;
   object-fit: cover;
 }

@@ -1,7 +1,8 @@
 <section class="dark" id="home">
-    @if (hero is not null)
-    {
-        <img class="background" src="@(hero.Src)" alt="@(hero.Alt)" />
+    @if (kathryn is not null && background is not null)
+    {   
+        <img class="background" src="@(background.Src)" alt="@(background.Alt)" /> 
+        <img class="kathryn" src="@(kathryn.Src)" alt="@(kathryn.Alt)" />  
     }
     <div style="position: absolute; top: 30%; left: 2rem;">
     @if (property is null)
@@ -29,11 +30,13 @@
     public required HeroImageService HeroImageService { get; set; }
 
     private SiteProperties? property;
-    private HeroImage? hero;
+    private HeroImage? kathryn;
+    private HeroImage? background;
 
     protected override async Task OnInitializedAsync()
     {
         property = await Http.GetFromJsonAsync<SiteProperties>("sample-data/siteproperties.json");
-        hero = await HeroImageService.GetHeroAsync(img => img.Name is "home");
+        kathryn = await HeroImageService.GetHeroAsync(img => img.Name is "kathryn");
+        background = await HeroImageService.GetHeroAsync(img => img.Name is "home-background");
     }
 }
