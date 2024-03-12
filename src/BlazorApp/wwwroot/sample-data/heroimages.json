@@ -23,5 +23,10 @@
     "name": "wheel-logo",
     "src": "images/wheel-logo.jfif",
     "alt": "wheel telemedicine platform company logo"
+  },
+  {
+    "name": "amwell-logo",
+    "src": "images/amwell-logo.png",
+    "alt": "amwell telemedicine platform company logo"
   }
 ]

@@ -45,10 +45,12 @@
     private HeroImage? hero;
     private HeroImage? wheelLogo;
 
+    private List<HeroImage>? companyLogos;
+
     protected override async Task OnInitializedAsync()
     {
         customers = await Http.GetFromJsonAsync<List<Customer>>("sample-data/customers.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
-        wheelLogo = await HeroImageService.GetHeroAsync(img => img.Name is "wheel-logo");
+        wheelLogo = await HeroImageService.GetHeroAsync(img => img.Name.Contains("logo"));
     }
 }
