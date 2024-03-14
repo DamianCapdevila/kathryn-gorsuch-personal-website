@@ -21,12 +21,23 @@
   },
   {
     "name": "wheel-logo",
-    "src": "images/wheel-logo.jfif",
+    "src": "images/wheel-logo.jpeg",
     "alt": "wheel telemedicine platform company logo"
   },
   {
     "name": "amwell-logo",
     "src": "images/amwell-logo.png",
     "alt": "amwell telemedicine platform company logo"
+  },
+  {
+    "name": "hims&hers-logo",
+    "src": "images/hims&hers-logo.jpeg",
+    "alt": "hims&hers telemedicine platform company logo"
+  },
+  {
+    "name": "agelessrx-logo",
+    "src": "images/agelessrx-logo.png",
+    "alt": "agelessrx telemedicine platform company logo"
   }
+
 ]

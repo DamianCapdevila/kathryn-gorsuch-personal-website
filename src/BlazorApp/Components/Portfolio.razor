@@ -7,26 +7,17 @@
     }
     else
     {
-        @* <div class="portfolio-hero">
-            @if (hero is not null)
-            {
-                <img src="@(hero.Src)" style="height: 90%; width: 100%; object-fit: cover;" 
-                    alt="@(hero.Alt)" />
-            }
-        </div> *@
         <div class="container">
             @foreach (var customer in customers)
             {
                 <div class="box" key="@customer.Title">
                     <a href="@customer.Url" target="_blank" rel="noopener noreferrer">
-                        <h3 style="flex-basis: 40px;">@customer.Title</h3>
-                    </a>
-                    @* <p class="small">@customer.Description</p> *@
                     @if(companyLogos is not null)
                     {
-                        <img src="@(companyLogos?.Find(logo => logo.Name == customer.Title)?.Src)" style="height: 100%; width: 100%; object-fit: cover;" 
-                        alt="@(companyLogos?.Find(logo => logo.Name == customer.Title)?.Src)" />
+                        <img src="@(companyLogos?.Find(logo => logo.Name.Contains(customer.Title))?.Src)" style="height: 100%; width: 100%; object-fit: cover;" 
+                        alt="@(companyLogos?.Find(logo => logo.Name.Contains(customer.Title))?.Src)" />
                     }
+                    </a>
                 </div>
             }
         </div>
@@ -43,8 +34,6 @@
 
     private List<Customer>? customers;
     private HeroImage? hero;
-    private HeroImage? wheelLogo;
-
     private List<HeroImage>? companyLogos;
 
     protected override async Task OnInitializedAsync()
