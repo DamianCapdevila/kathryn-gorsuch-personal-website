@@ -1,6 +1,6 @@
 [
   {
-    "title": "Amwell",
+    "title": "amwell",
     "description": "Provided on-demand videocall and phone urgent care to adult and pediatric patients.",
     "url": "https://amwell.com/landing.htm"
   },
@@ -10,12 +10,12 @@
     "url": "https://www.hims.com/"
   },
   {
-    "title": "Wheel",
+    "title": "wheel",
     "description": "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
     "url": "https://www.wheel.com/"
   },
   {
-    "title": "AgelessRx",
+    "title": "agelessRx",
     "description": "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
     "url": "https://agelessrx.com/"
   }

@@ -22,10 +22,10 @@
                         <h3 style="flex-basis: 40px;">@customer.Title</h3>
                     </a>
                     @* <p class="small">@customer.Description</p> *@
-                    @if(wheelLogo is not null)
+                    @if(companyLogos is not null)
                     {
-                        <img src="@(wheelLogo.Src)" style="height: 100%; width: 100%; object-fit: cover;" 
-                        alt="@(wheelLogo.Alt)" />
+                        <img src="@(companyLogos?.Find(logo => logo.Name == customer.Title)?.Src)" style="height: 100%; width: 100%; object-fit: cover;" 
+                        alt="@(companyLogos?.Find(logo => logo.Name == customer.Title)?.Src)" />
                     }
                 </div>
             }
@@ -51,6 +51,6 @@
     {
         customers = await Http.GetFromJsonAsync<List<Customer>>("sample-data/customers.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
-        wheelLogo = await HeroImageService.GetHeroAsync(img => img.Name.Contains("logo"));
+        companyLogos = await HeroImageService.GetPicturesAsync(img => img.Name.Contains("logo"));
     }
 }
