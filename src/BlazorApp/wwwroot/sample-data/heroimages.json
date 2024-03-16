@@ -38,6 +38,11 @@
     "name": "agelessrx-logo",
     "src": "images/agelessrx-logo.png",
     "alt": "agelessrx telemedicine platform company logo"
+  },
+  {
+    "name": "gabbi-logo",
+    "src": "images/gabbi-logo.png",
+    "alt": "gabbi telemedicine platform company logo"
   }
 
 ]

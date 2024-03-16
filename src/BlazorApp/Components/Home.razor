@@ -36,7 +36,7 @@
     protected override async Task OnInitializedAsync()
     {
         property = await Http.GetFromJsonAsync<SiteProperties>("sample-data/siteproperties.json");
-        kathryn = await HeroImageService.GetHeroAsync(img => img.Name is "kathryn");
-        background = await HeroImageService.GetHeroAsync(img => img.Name is "home-background");
+        kathryn = await HeroImageService.GetPictureAsync(img => img.Name is "kathryn");
+        background = await HeroImageService.GetPictureAsync(img => img.Name is "home-background");
     }
 }

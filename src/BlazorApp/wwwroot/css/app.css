@@ -147,10 +147,40 @@ a:hover {
 }
 
 .portfolio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box {
+    flex: 1; /* Distribute available space evenly among logos */
+    max-width: 200px; /* Set a maximum width for the logos */
+    height: auto; /* Let the height adjust based on the width */
+    display: flex;
+    margin: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.box img {
+    max-width: 100%; /* Ensure the image fits within the box */
+    max-height: 100%; /* Ensure the image fits within the box */
+    object-fit: contain; /* Maintain aspect ratio and fit within the box */
+}
+
+
+/*.portfolio-container {
   display: flex;
   flex-direction: row;
   padding-top: 3rem;
-}
+}*/
 
 @media screen and (max-width: 420px) {
   .portfolio-container {
@@ -158,10 +188,10 @@ a:hover {
   }
 }
 
-.portfolio-hero {
+/*.portfolio-hero {
   max-width: 40%;
   align-self: center;
-}
+}*/
 
 @media screen and (max-width: 420px) {
   .portfolio-hero {
@@ -170,32 +200,32 @@ a:hover {
   }
 }
 
-.container {
+/*.container {
   margin: 10px auto;
-  display: grid;
-  grid-template-columns: 330px 300px;
+  display: flex;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto; 
   grid-gap: 20px;
   justify-content: center;
-}
+}*/
 
 @media screen and (max-width: 420px) {
   .container {
     margin: 20px auto;
     display: inline;
-    grid-template-columns: 330px 300px;
+    grid-template-columns: auto auto auto;
     grid-gap: 20px;
   }
 }
 
-.container .box {
+/*.container .box {
   border-radius: 10px;
   padding: 24px 16px;
   display: flex;
   justify-content:center;
   flex-direction: column;
-  border: 0px solid rgb(204, 204, 204);
   text-align: center;
-}
+}*/
 
 img.social-icon {
   width: 30px;

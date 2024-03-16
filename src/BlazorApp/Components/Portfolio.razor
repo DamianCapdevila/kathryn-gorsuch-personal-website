@@ -1,21 +1,21 @@
 <section class="light" id="portfolio">
     <h2>Customers</h2>
     <div class="portfolio-container">
-    @if (customers is null)
+    @if (_customers is null)
     {
         <p><em>Loading...</em></p>
     }
     else
     {
         <div class="container">
-            @foreach (var customer in customers)
+            @foreach (var customer in _customers)
             {
                 <div class="box" key="@customer.Title">
                     <a href="@customer.Url" target="_blank" rel="noopener noreferrer">
-                    @if(companyLogos is not null)
+                    @if(_companyLogos is not null)
                     {
-                        <img src="@(companyLogos?.Find(logo => logo.Name.Contains(customer.Title))?.Src)" style="height: 100%; width: 100%; object-fit: cover;" 
-                        alt="@(companyLogos?.Find(logo => logo.Name.Contains(customer.Title))?.Src)" />
+                        <img src="@(_companyLogos?.Find(logo => logo.Name.Contains(customer.Title))?.Src)" style="height: 100%; width: 100%; object-fit: cover;" 
+                        alt="@(_companyLogos?.Find(logo => logo.Name.Contains(customer.Title))?.Src)" />
                     }
                     </a>
                 </div>
@@ -32,14 +32,12 @@
     [Parameter, EditorRequired]
     public required HeroImageService HeroImageService { get; set; }
 
-    private List<Customer>? customers;
-    private HeroImage? hero;
-    private List<HeroImage>? companyLogos;
+    private List<Customer>? _customers;
+    private List<HeroImage>? _companyLogos;
 
     protected override async Task OnInitializedAsync()
     {
-        customers = await Http.GetFromJsonAsync<List<Customer>>("sample-data/customers.json");
-        hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
-        companyLogos = await HeroImageService.GetPicturesAsync(img => img.Name.Contains("logo"));
+        _customers = await Http.GetFromJsonAsync<List<Customer>>("sample-data/customers.json");
+        _companyLogos = await HeroImageService.GetPicturesAsync(img => img.Name.Contains("logo"));
     }
 }

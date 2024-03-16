@@ -16,7 +16,7 @@ public sealed class HeroImageService : IDisposable
                 "sample-data/heroimages.json");
     }
 
-    internal async Task<HeroImage?> GetHeroAsync(Func<HeroImage, bool> predicate)
+    internal async Task<HeroImage?> GetPictureAsync(Func<HeroImage, bool> predicate)
     {
         var heroes = await _getHeroImagesTask;
         return heroes?.FirstOrDefault(predicate);
