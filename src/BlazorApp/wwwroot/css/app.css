@@ -35,7 +35,7 @@ section.dark {
 section.light {
   color: black;
   background: rgba(255, 255, 255, 0.35);
-  padding: 8rem 0;
+  padding: 3.5rem 0;
 }
 
 section img.background {
@@ -146,7 +146,7 @@ a:hover {
   color: #4e567e;
 }
 
-.portfolio-container {
+.customers-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,14 +176,14 @@ a:hover {
 }
 
 
-/*.portfolio-container {
+/*.customers-container {
   display: flex;
   flex-direction: row;
   padding-top: 3rem;
 }*/
 
 @media screen and (max-width: 420px) {
-  .portfolio-container {
+  .customers-container {
     flex-direction: column;
   }
 }
