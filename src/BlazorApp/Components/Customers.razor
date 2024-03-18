@@ -30,14 +30,14 @@
     public required HttpClient Http { get; set; }
 
     [Parameter, EditorRequired]
-    public required HeroImageService HeroImageService { get; set; }
+    public required ImageService ImageService { get; set; }
 
     private List<Customer>? _customers;
-    private List<HeroImage>? _companyLogos;
+    private List<Image>? _companyLogos;
 
     protected override async Task OnInitializedAsync()
     {
         _customers = await Http.GetFromJsonAsync<List<Customer>>("sample-data/customers.json");
-        _companyLogos = await HeroImageService.GetPicturesAsync(img => img.Name.Contains("logo"));
+        _companyLogos = await ImageService.GetPicturesAsync(img => img.Name.Contains("logo"));
     }
 }

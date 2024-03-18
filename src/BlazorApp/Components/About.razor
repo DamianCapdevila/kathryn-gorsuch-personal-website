@@ -1,7 +1,7 @@
 <section class="light" id="about">
-    @if (hero is not null)
+    @if (backgroundImage is not null)
     {
-        <img class="background" src="@(hero.Src)" alt="@(hero.Alt)" />
+        <img class="background" src="@(backgroundImage.Src)" alt="@(backgroundImage.Alt)" />
     }
     <h2>About Myself</h2>
     <div style="background-color: white; width: 50%; padding: 4rem; margin: 3rem auto; text-align: center;">
@@ -30,15 +30,15 @@
     public required HttpClient Http { get; set; }
 
     [Parameter, EditorRequired]
-    public required HeroImageService HeroImageService { get; set; }
+    public required ImageService ImageService { get; set; }
 
     private AboutMe? aboutMe;
-    private HeroImage? hero;
+    private Image? backgroundImage;
 
     protected override async Task OnInitializedAsync()
     {
         aboutMe = await Http.GetFromJsonAsync<AboutMe>("sample-data/aboutme.json");
-        hero = await HeroImageService.GetPictureAsync(img => img.Name is "about");
+        backgroundImage = await ImageService.GetPictureAsync(img => img.Name is "about-background");
 
     }
 }

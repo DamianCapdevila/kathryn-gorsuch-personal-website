@@ -1,7 +1,7 @@
 [
   {
-    "name": "kathryn",
-    "src": "images/kathryn.jfif",
+    "name": "kathryn-headshot",
+    "src": "images/kathryn-headshot.jfif",
     "alt": "telemedicine professional woman with formal attire"
   },
   {
@@ -10,7 +10,7 @@
     "alt": "background with common medicine elements and tools"
   }, 
   {
-    "name": "about",
+    "name": "about-background",
     "src": "images/motion-background.jpg",
     "alt": "gray abstract background"
   },

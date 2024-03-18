@@ -1,7 +1,7 @@
 <section class="dark" id="home">
-    @if (kathryn is not null && background is not null)
+    @if (kathryn is not null && backgroundImage is not null)
     {   
-        <img class="background" src="@(background.Src)" alt="@(background.Alt)" /> 
+        <img class="background" src="@(backgroundImage.Src)" alt="@(backgroundImage.Alt)" /> 
         <img class="kathryn" src="@(kathryn.Src)" alt="@(kathryn.Alt)" />  
     }
     <div style="position: absolute; top: 30%; left: 2rem;">
@@ -27,16 +27,16 @@
     public required HttpClient Http { get; set; }
 
     [Parameter, EditorRequired]
-    public required HeroImageService HeroImageService { get; set; }
+    public required ImageService ImageService { get; set; }
 
     private SiteProperties? property;
-    private HeroImage? kathryn;
-    private HeroImage? background;
+    private Image? kathryn;
+    private Image? backgroundImage;
 
     protected override async Task OnInitializedAsync()
     {
         property = await Http.GetFromJsonAsync<SiteProperties>("sample-data/siteproperties.json");
-        kathryn = await HeroImageService.GetPictureAsync(img => img.Name is "kathryn");
-        background = await HeroImageService.GetPictureAsync(img => img.Name is "home-background");
+        kathryn = await ImageService.GetPictureAsync(img => img.Name is "kathryn-headshot");
+        backgroundImage = await ImageService.GetPictureAsync(img => img.Name is "home-background");
     }
 }

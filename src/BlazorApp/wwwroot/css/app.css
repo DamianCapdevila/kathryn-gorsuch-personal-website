@@ -176,22 +176,11 @@ a:hover {
 }
 
 
-/*.customers-container {
-  display: flex;
-  flex-direction: row;
-  padding-top: 3rem;
-}*/
-
 @media screen and (max-width: 420px) {
   .customers-container {
     flex-direction: column;
   }
 }
-
-/*.portfolio-hero {
-  max-width: 40%;
-  align-self: center;
-}*/
 
 @media screen and (max-width: 420px) {
   .portfolio-hero {
@@ -199,15 +188,6 @@ a:hover {
     align-self: center;
   }
 }
-
-/*.container {
-  margin: 10px auto;
-  display: flex;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto; 
-  grid-gap: 20px;
-  justify-content: center;
-}*/
 
 @media screen and (max-width: 420px) {
   .container {
@@ -217,15 +197,6 @@ a:hover {
     grid-gap: 20px;
   }
 }
-
-/*.container .box {
-  border-radius: 10px;
-  padding: 24px 16px;
-  display: flex;
-  justify-content:center;
-  flex-direction: column;
-  text-align: center;
-}*/
 
 img.social-icon {
   width: 30px;
