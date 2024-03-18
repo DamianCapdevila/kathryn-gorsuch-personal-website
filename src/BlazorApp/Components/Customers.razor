@@ -1,5 +1,5 @@
-<section class="light" id="customers">
-    <h2>Customers</h2>
+<section class="light align-content-center" id="customers">
+    <h2 class="text-center">Customers</h2>
     <div class="customers-container">
     @if (_customers is null)
     {
@@ -7,14 +7,14 @@
     }
     else
     {
-        <div class="container">
+			<div class="container row-cols-xl-6 row-cols-lg-3 row-cols-sm-1 gap-xxl-5 gap-xl-4 gap-md-3 gap-sm-1">
             @foreach (var customer in _customers)
             {
                 <div class="box" key="@customer.Title">
                     <a href="@customer.Url" target="_blank" rel="noopener noreferrer">
                     @if(_companyLogos is not null)
                     {
-                        <img src="@(_companyLogos?.Find(logo => logo.Name.Contains(customer.Title))?.Src)" style="height: 100%; width: 100%; object-fit: cover;" 
+                        <img src="@(_companyLogos?.Find(logo => logo.Name.Contains(customer.Title))?.Src)" style="height: 100%; width: 100%; object-fit: scale-down;" 
                         alt="@(_companyLogos?.Find(logo => logo.Name.Contains(customer.Title))?.Src)" />
                     }
                     </a>

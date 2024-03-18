@@ -1,21 +1,25 @@
 <section class="dark" id="home">
-    @if (kathryn is not null && backgroundImage is not null)
+    @if (backgroundImage is not null)
     {   
         <img class="background" src="@(backgroundImage.Src)" alt="@(backgroundImage.Alt)" /> 
-        <img class="kathryn" src="@(kathryn.Src)" alt="@(kathryn.Alt)" />  
     }
-    <div style="position: absolute; top: 30%; left: 2rem;">
+
     @if (property is null)
     {
         <p><em>Loading...</em></p>
     }
-    else
-    {
-        <h1>@property.Name</h1>
-        <h2>@property.Title</h2>
+    else if(!(property is null) && !(kathryn is null))
+	{
+		<article class="d-flex text-center justify-content-center" style="margin-top: 18rem;">
+				<div class="d-block justify-content-center">
+					<h1>@property.Name</h1>
+					<h2>@property.Title</h2>
+				</div>
+				<img class="kathryn rounded-circle" src="@(kathryn.Src)" alt="@(kathryn.Alt)" style=" width: 30vmax; height: 30vmax;" />
+		</article>
     }
-    </div>
-    <div style="position: absolute; bottom: 8rem; left: 50%;">
+    
+    <div class="text-center">
         <a href="#about" target="_top">
             <img src="images/down-arrow.svg" style="height: 3rem; width: 3rem;" alt="scroll down" />
         </a>

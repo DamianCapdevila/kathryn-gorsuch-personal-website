@@ -50,19 +50,6 @@ section img.background {
   object-fit: cover;
 }
 
- section img.kathryn {
-  width: 30vmax; 
-  height: 30vmax; 
-  border-radius: 50%; 
-  z-index: 1;
-  position: absolute;
-  top: 50%;
-  right: 25%; 
-  transform: translate(50%, -50%);
-  pointer-events: none;
-  object-fit: cover;
-}
-
 h1 {
   font-weight: 300;
   font-family: "Cormorant Garamond", serif;
@@ -101,7 +88,6 @@ h2 {
   font-weight: 400;
   font-size: 2rem;
   margin: 0;
-  text-align: center;
 }
 
 h3 {
@@ -159,21 +145,21 @@ a:hover {
     gap: 20px;
 }
 
-.box {
-    flex: 1; /* Distribute available space evenly among logos */
-    max-width: 200px; /* Set a maximum width for the logos */
-    height: auto; /* Let the height adjust based on the width */
-    display: flex;
+/*.box {
+    flex: 1;*/ /* Distribute available space evenly among logos */
+    /*max-width: 200px;*/ /* Set a maximum width for the logos */
+    /*height: auto;*/ /* Let the height adjust based on the width */
+    /*display: flex;
     margin: 2%;
     justify-content: center;
     align-items: center;
-}
+}*/
 
-.box img {
-    max-width: 100%; /* Ensure the image fits within the box */
-    max-height: 100%; /* Ensure the image fits within the box */
-    object-fit: contain; /* Maintain aspect ratio and fit within the box */
-}
+/*.box img {
+    max-width: 100%;*/ /* Ensure the image fits within the box */
+    /*max-height: 100%;*/ /* Ensure the image fits within the box */
+    /*object-fit: contain;*/ /* Maintain aspect ratio and fit within the box */
+/*}*/
 
 
 @media screen and (max-width: 420px) {
