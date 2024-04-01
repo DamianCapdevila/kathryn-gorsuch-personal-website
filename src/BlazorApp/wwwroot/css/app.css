@@ -57,7 +57,16 @@ h1 {
   margin: 0;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 540px) {
+  h1 {
+    font-weight: 300;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 541px) and (max-width: 720px) {
   h1 {
     font-weight: 300;
     font-family: "Cormorant Garamond", serif;
@@ -66,20 +75,11 @@ h1 {
   }
 }
 
-@media screen and (min-width: 301px) and (max-width: 360px) {
+@media screen and (min-width: 721px) and (max-width: 960px) {
   h1 {
     font-weight: 300;
     font-family: "Cormorant Garamond", serif;
     font-size: 4rem;
-    margin: 0;
-  }
-}
-
-@media screen and (min-width: 361px) and (max-width: 420px) {
-  h1 {
-    font-weight: 300;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 5rem;
     margin: 0;
   }
 }
@@ -145,22 +145,6 @@ a:hover {
     gap: 20px;
 }
 
-/*.box {
-    flex: 1;*/ /* Distribute available space evenly among logos */
-    /*max-width: 200px;*/ /* Set a maximum width for the logos */
-    /*height: auto;*/ /* Let the height adjust based on the width */
-    /*display: flex;
-    margin: 2%;
-    justify-content: center;
-    align-items: center;
-}*/
-
-/*.box img {
-    max-width: 100%;*/ /* Ensure the image fits within the box */
-    /*max-height: 100%;*/ /* Ensure the image fits within the box */
-    /*object-fit: contain;*/ /* Maintain aspect ratio and fit within the box */
-/*}*/
-
 
 @media screen and (max-width: 420px) {
   .customers-container {
@@ -201,12 +185,12 @@ img.social-icon {
     z-index: 1000;
 }
 
-    #blazor-error-ui .dismiss {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
-    }
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
 
 .loading-progress {
     position: relative;
@@ -216,19 +200,19 @@ img.social-icon {
     margin: 20vh auto 1rem auto;
 }
 
-    .loading-progress circle {
-        fill: none;
-        stroke: #e0e0e0;
-        stroke-width: 0.6rem;
-        transform-origin: 50% 50%;
-        transform: rotate(-90deg);
-    }
+.loading-progress circle {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 0.6rem;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+}
 
-        .loading-progress circle:last-child {
-            stroke: #1b6ec2;
-            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
-            transition: stroke-dasharray 0.05s ease-in-out;
-        }
+.loading-progress circle:last-child {
+    stroke: #1b6ec2;
+    stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+    transition: stroke-dasharray 0.05s ease-in-out;
+}
 
 .loading-progress-text {
     position: absolute;
@@ -237,6 +221,6 @@ img.social-icon {
     inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
 }
 
-    .loading-progress-text:after {
-        content: var(--blazor-load-percentage-text, "Loading");
-    }
+.loading-progress-text:after {
+    content: var(--blazor-load-percentage-text, "Loading");
+}

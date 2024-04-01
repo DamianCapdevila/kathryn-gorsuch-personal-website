@@ -10,12 +10,22 @@
     }
     else if(!(property is null) && !(kathryn is null))
 	{
-		<article class="d-flex text-center justify-content-center" style="margin-top: 18rem;">
-				<div class="d-block justify-content-center">
+		<article class="d-md-flex d-none text-center justify-content-center" style="margin-top: 18rem;">
+				<div class="d-block justify-content-center mb-auto mt-auto">
 					<h1>@property.Name</h1>
 					<h2>@property.Title</h2>
+					<a class="btn btn-secondary btn-lg mt-4" href="mailto:@(property.Email)" role="button">Contact me</a>
 				</div>
-				<img class="kathryn rounded-circle" src="@(kathryn.Src)" alt="@(kathryn.Alt)" style=" width: 30vmax; height: 30vmax;" />
+				<img class="kathryn rounded-circle m-5" src="@(kathryn.Src)" alt="@(kathryn.Alt)" style=" width: 30vmax; height: 30vmax;" />
+		</article>
+		
+		<article class="d-md-none text-center justify-content-center" style="margin-top: 18rem;">
+			<img class="kathryn rounded-circle m-5" src="@(kathryn.Src)" alt="@(kathryn.Alt)" style=" width: 30vmax; height: 30vmax;" />
+			<div class="d-block justify-content-center mb-auto mt-auto">
+				<h1>@property.Name</h1>
+				<h2>@property.Title</h2>
+				<a class="btn btn-secondary btn-lg mt-4" href="mailto:@(property.Email)" role="button">Contact me</a>
+			</div>
 		</article>
     }
     
