@@ -1,6 +1,11 @@
 # Nurse Practitioner Website
 
-Welcome to the Nurse Practitioner Website! This website is under construction and is designed to provide information about a nurse practitioner named Kathryn. The application was created using C# .NET and Blazor, with Bootstrap for styling. Please note that the website is not yet responsive and requires further adaptation for different screen sizes.
+Welcome to the Nurse Practitioner Website! This website is under construction and is designed to provide information about a nurse practitioner named Kathryn. 
+
+The application, published in Azure Static Web Apps, was created using C# .NET and Blazor, with Bootstrap for styling. 
+
+Please note that the website is not yet responsive and requires further adaptation for different screen sizes.
+See it running here: [here](https://salmon-pond-053a0a40f.5.azurestaticapps.net/) !
 
 ## Sections
 
