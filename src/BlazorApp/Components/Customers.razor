@@ -1,27 +1,31 @@
-<section class="light align-content-center" id="customers">
-    <h2 class="text-center">Customers</h2>
-    <div class="customers-container">
-    @if (_customers is null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
-			<div class="container row-cols-xl-6 row-cols-lg-3 row-cols-sm-1 gap-xxl-5 gap-xl-4 gap-md-3 gap-sm-1 ">
-            @foreach (var customer in _customers)
+<section class="light py-5" id="customers">
+    <div class="container text-center">
+        <h2 class="mb-5 display-4 display-md-3 display-lg-2">Customers</h2>
+        <div class="row justify-content-center">
+            @if (_customers is null)
             {
-                <div class="box" key="@customer.Title">
-                    <a href="@customer.Url" target="_blank" rel="noopener noreferrer">
-                    @if(_companyLogos is not null)
+                <p><em>Loading...</em></p>
+            }
+            else
+            {
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 g-4 justify-content-center">
+                    @foreach (var customer in _customers)
                     {
-                        <img src="@(_companyLogos?.Find(logo => logo.Name.Contains(customer.Title))?.Src)" style="height: 100%; width: 100%; object-fit: scale-down;" 
-                        alt="@(_companyLogos?.Find(logo => logo.Name.Contains(customer.Title))?.Src)" />
+                        <div class="col d-flex justify-content-center align-items-center">
+                            <a href="@customer.Url" target="_blank" rel="noopener noreferrer">
+                                @if (_companyLogos is not null)
+                                {
+                                    <img src="@(_companyLogos?.Find(logo => logo.Name.Contains(customer.Title))?.Src)" 
+                                         class="img-fluid" 
+                                         alt="@(_companyLogos?.Find(logo => logo.Name.Contains(customer.Title))?.Alt)" 
+                                         style="max-width: 100%; max-height: 80px;" />
+                                }
+                            </a>
+                        </div>
                     }
-                    </a>
                 </div>
             }
         </div>
-    }
     </div>
 </section>
 

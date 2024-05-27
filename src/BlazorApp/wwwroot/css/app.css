@@ -11,6 +11,8 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -50,18 +52,33 @@ section img.background {
   object-fit: cover;
 }
 
-h1 {
-  font-weight: 300;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 7rem;
-  margin: 0;
+
+@media screen and (max-width: 540px) {
+  h1 {
+    font-weight: 300;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 540px) {
   h1 {
     font-weight: 300;
     font-family: "Cormorant Garamond", serif;
-    font-size: 2rem;
+    font-size: 2rem; /* Reduced size for smaller screens */
+    margin: 0;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 1rem; /* Reduced size for smaller screens */
     margin: 0;
   }
 }
@@ -70,7 +87,13 @@ h1 {
   h1 {
     font-weight: 300;
     font-family: "Cormorant Garamond", serif;
-    font-size: 3rem;
+    font-size: 3rem; /* Adjusted size for medium-small screens */
+    margin: 0;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 1.5rem; /* Adjusted size for medium-small screens */
     margin: 0;
   }
 }
@@ -79,15 +102,30 @@ h1 {
   h1 {
     font-weight: 300;
     font-family: "Cormorant Garamond", serif;
-    font-size: 4rem;
+    font-size: 3.5rem; /* Adjusted size for medium-large screens */
+    margin: 0;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 2rem; /* Adjusted size for medium-large screens */
     margin: 0;
   }
 }
 
-h2 {
-  font-weight: 400;
-  font-size: 2rem;
-  margin: 0;
+@media screen and (min-width: 961px) {
+  h1 {
+    font-weight: 300;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 4rem; /* Larger size for large screens */
+    margin: 0;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 2.5rem; /* Larger size for large screens */
+    margin: 0;
+  }
 }
 
 h3 {
@@ -143,6 +181,7 @@ a:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    overflow: hidden;
 }
 
 
