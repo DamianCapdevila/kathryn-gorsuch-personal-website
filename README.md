@@ -1,11 +1,10 @@
 # Nurse Practitioner Website
 
-Welcome to the Nurse Practitioner Website! This website is under construction and is designed to provide information about a nurse practitioner named Kathryn. 
+Welcome to the Nurse Practitioner Website! This website is designed to provide information about a nurse practitioner named Kathryn. 
 
 The application, published in Azure Static Web Apps, was created using C# .NET and Blazor, with Bootstrap for styling. 
 
-Please note that the website is not yet responsive and requires further adaptation for different screen sizes.
-See it running here: [here](https://salmon-pond-053a0a40f.5.azurestaticapps.net/) !
+See it running here: [here](https://www.kathryngorsuchnursepractitioner.com/) !
 
 ## Sections
 
@@ -21,14 +20,6 @@ The About section provides information about Kathryn herself, including a descri
 
 The Customers section displays information about Kathryn's customers. It includes a grid of customer logos linked to their respective websites.
 
-## Usage
-
-To run the Nurse Practitioner Website:
-
-1. Clone the repository to your local machine.
-2. Open the project in Visual Studio or your preferred IDE.
-3. Build and run the project.
-
 ## Dependencies
 
 The Nurse Practitioner Website relies on the following dependencies:
@@ -37,6 +28,3 @@ The Nurse Practitioner Website relies on the following dependencies:
 - Blazor
 - Bootstrap
 
-## Note
-
-This website is a work in progress. Contributions and suggestions are welcome!
