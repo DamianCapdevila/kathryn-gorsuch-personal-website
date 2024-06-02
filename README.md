@@ -20,14 +20,6 @@ The About section provides information about Kathryn herself, including a descri
 
 The Customers section displays information about Kathryn's customers. It includes a grid of customer logos linked to their respective websites.
 
-## Usage
-
-To run the Nurse Practitioner Website:
-
-1. Clone the repository to your local machine.
-2. Open the project in Visual Studio or your preferred IDE.
-3. Build and run the project.
-
 ## Dependencies
 
 The Nurse Practitioner Website relies on the following dependencies:
