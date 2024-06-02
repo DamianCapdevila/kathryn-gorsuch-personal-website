@@ -4,7 +4,7 @@ Welcome to the Nurse Practitioner Website! This website is designed to provide i
 
 The application, published in Azure Static Web Apps, was created using C# .NET and Blazor, with Bootstrap for styling. 
 
-See it running here: [here](https://icy-sand-02472b10f.5.azurestaticapps.net/) !
+See it running here: [here](https://www.kathryngorsuchnursepractitioner.com/) !
 
 ## Sections
 
