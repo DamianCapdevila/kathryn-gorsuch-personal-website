@@ -5,7 +5,7 @@ Welcome to the Nurse Practitioner Website! This website is under construction an
 The application, published in Azure Static Web Apps, was created using C# .NET and Blazor, with Bootstrap for styling. 
 
 Please note that the website is not yet responsive and requires further adaptation for different screen sizes.
-See it running here: [here](https://salmon-pond-053a0a40f.5.azurestaticapps.net/) !
+See it running here: [here](https://icy-sand-02472b10f.5.azurestaticapps.net/) !
 
 ## Sections
 
