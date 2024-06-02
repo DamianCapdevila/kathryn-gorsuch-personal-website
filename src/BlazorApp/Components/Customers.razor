@@ -43,5 +43,6 @@
     {
         _customers = await Http.GetFromJsonAsync<List<Customer>>("sample-data/customers.json");
         _companyLogos = await ImageService.GetPicturesAsync(img => img.Name.Contains("logo"));
+        
     }
 }
