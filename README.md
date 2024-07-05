@@ -6,6 +6,9 @@ The application, published in Azure Static Web Apps, was created using C# .NET a
 
 See it running here: [here](https://www.kathryngorsuchnursepractitioner.com/) !
 
+![image](./KathrynWebsite.png)
+
+
 ## Sections
 
 ### Home
